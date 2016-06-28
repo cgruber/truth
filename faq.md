@@ -16,7 +16,7 @@ if that causes an ambiguous method conflict, you can use the longhand form:
 ```java
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assert_;
-…
+...
 String string = "google";
 assertThat(string).endsWith("gle");
 assert_().that(string).endsWith("gle");
