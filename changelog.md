@@ -7,8 +7,8 @@ url: /changelog
 * auto-gen TOC:
 {:toc}
 
-Planned improvements and changes
---------------------------------
+
+## Planned improvements and changes
 
   - Subject wrappers for new types:
     - New subjects for Float/Double and other currently missing types.
@@ -18,9 +18,7 @@ Planned improvements and changes
   - New propositions on existing Subject wrappers:
     - StringSubject, IntegerSubject, etc.
 
-
-1.0-SNAPSHOT
--------
+## 1.0-SNAPSHOT
 
   - Basic form of:
     - `verb().that(subject).somePredicate();`
@@ -38,7 +36,7 @@ Planned improvements and changes
     - Class objects
     - Booleans
     - Integers
-    - Guava Optional<T> (java8 Optional<T> needs to be provided through an extension) 
+    - Guava Optional<T> (java8 `Optional<T>` will be provided through an extension) 
   - Extensibility via `about()`, e.g. `ASSERT.about(javaSources()).that(sourceFile)...`
   - ComparisonFailure used for Strings (for better IDE errors)
   

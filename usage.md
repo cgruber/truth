@@ -7,7 +7,10 @@ url: /usage
 * auto-gen TOC:
 {:toc}
 
-# Super basics
+
+> ***NOTE:*** *This documentation is possibly out of date*
+
+## Super basics
 
 Truth is used in a literate, or fluent programming style.
 
@@ -39,10 +42,10 @@ Truth would have you write:
 
     ASSERT.that(blah).isEmpty();
     
-# The Guts
+## The Guts
 
 
-## How does Truth work?
+### How does Truth work?
 
 Truth presents you with a test verb (ASSERT and ASSUME are built in, and
 EXPECT is supported with JUnit4 @Rules).  The verb is asserting on a subject,
@@ -59,7 +62,7 @@ wrapper around your value, which declares proposition methods such as "contains"
 or "isMoreThan" or "isEmpty" etc.  These allow your IDE to suggest available
 completions. 
 
-## Failure Strategy
+### Failure Strategy
 
 Truth treats failure as data - a proposition was not true... so now what?
 Well, that depends on the failure strategy.  Truth supports a few different
@@ -106,21 +109,21 @@ to not be run (unexpectedly), and EXPECT can encourage the developer
 to test propositions about way too many things, causing big heavy 
 tests, rather than lots of small, clear tests.   
 
-## Extensibility
+### Extensibility
 
 Truth is extensible in a couple of ways - new assertions, and alternative behaviors on failure.  
 
-### Supporting new types or alternative proposition for known types.
+#### Supporting new types or alternative proposition for known types.
 
 One can add additional (or alternative) sets of propositions via subtypes of Subject and SubjectFactory and the about() method. An example of this can be found in [this test of about() delegation](https://github.com/google/truth/blob/master/core/src/test/java/com/google/common/truth/delegation/DelegationTest.java).
 
 One could add a new Subject for one's custom type, or treat a type as if it were another, say, to treat strings as if they were URIs, etc.  SubjectFactory provides a means by which one can link a type to a given Subject which contains propositions about that type.
 
-### Interpretations of proposition failure
+#### Interpretations of proposition failure
 
 Additional or alternative strategies for failure can be created by implementing a FailureStrategy and providing a hook for it.  Examples of different failure strategies are Assertion, (junit-style) Assumption, or c-style expectation (fail-at-end error gathering).  Another example of alternative uses include providing a custom exception type to permit more easy expected exception trapping where AssertionError is expected from the code under test, which is done by the [compile-testing](http://github.com/google/compile-testing) library. 
 
-## Categorically testing the contents of collections
+### Categorically testing the contents of collections
 
 Sometimes a test needs to look at the contents of a collection 
 and ensure that characteristics of all a collection's contents
@@ -148,7 +151,7 @@ a SubjectFactory
 The same extensibility provided in <code>ASSERT.about(MY_TYPE).that()...</code>
 is available to the developer over iterables of that type.
 
-## Re-labeling a Subject
+### Re-labeling a Subject
 
 There are times when a subject under test has a toString() representation that results in 
 awkward error messages.  For instance: 
@@ -173,7 +176,7 @@ This would result in an error message of:
 A developer can then far more effectively describe the subject of the test to permit 
 readable error messages with proper context.
 
-## Replacing the failure message
+### Replacing the failure message
 
 Sometimes the raw error message is inappropriate in context, and simply relabelling the subject
 is insufficient.  In those cases, the entire failure message can be replaced with:
@@ -182,9 +185,9 @@ is insufficient.  In those cases, the entire failure message can be replaced wit
     ASSERT.withFailureMessage("Calculations should always have at least one entry, but had none.")
         .that(calculationResult).isNotEmpty();
 
-# Built-in Propositions
+## Built-in Propositions
 
-## Basic objects
+### Basic objects
 
 Equality is simply "is" in Truth.  
 
@@ -211,9 +214,9 @@ Fields' presence and their values can be checked with:
 This should work even with private fields, and can be useful in testing 
 generated properties created by some frameworks like Lombok and Tapestry.
 
-## Basic operations on any object
+### Basic operations on any object
 
-### Labeling the subject
+#### Labeling the subject
 
      Foo foo = null;
      ASSERT.that(something).named("foo").isNotNull();
@@ -222,27 +225,27 @@ results in a more descriptive message:
 
      Not true that null reference "foo" is not null.
 
-### Applying propositions to objects in a collection
+#### Applying propositions to objects in a collection
 
      Set<String> strings = asList("Aaron", "Abigail", "Christian", "Jason");
      ASSERT.in(strings).thatEach(STRING).contains("a"); // this will fail
 
-## Class objects
+### Class objects
 
     ASSERT.that(aClass).declaresField("foo");
     
- + <em>Note, do not use <strong>hasField()</strong> on Class objects, as you will be 
+   <em>Note, do not use <strong>hasField()</strong> on Class objects, as you will be 
    testing whether Class.class itself has that field, not whether the 
    type it represents declares that field.  A deprecation warning should
    notify you of this usage, but be careful, and use <strong>declaresField("foo")</strong>
    instead.<em>
 
-## Booleans
+### Booleans
 
     ASSERT.that(something).isTrue();
     ASSERT.that(something).isFalse();
 
-## Numerics and Comparables
+### Numerics and Comparables
 
 Numerics like Integer can be compared for equality like other types
 
@@ -268,15 +271,15 @@ More complicated comparisons can be achieved using Range
     ASSERT.that(foo).isIn(Range.open(4, 6));
     ASSERT.that("foo").isIn(Range.open("eoo", "goo"));
 
-## Strings
+### Strings
 
     ASSERT.that(aString).contains("blah");
     ASSERT.that(aString).startsWith("foo");
     ASSERT.that(aString).endsWith("bar");
 
-## Iterables, Collections, Sets, and the like.
+### Iterables, Collections, Sets, and the like.
 
-### Iterables and Collections
+#### Iterables and Collections
 
 One can simply use object equality if you want to test collection 
 equivalence, given the guarantees of Collections' implementations of 
@@ -317,7 +320,7 @@ You can also pass in collections as containers of expected results, like so:
     ASSERT.that(collectionA).containsAnyIn(collectionB);
     ASSERT.that(collectionA).containsExactlyElementsIn(collectionB).inOrder();
 
-### Lists
+#### Lists
 
 Specific properties can be proposed on lists, such as:
 
@@ -329,7 +332,7 @@ And custom comparators can be provided
     ASSERT.that(myList).isOrdered(aComparator); 
     ASSERT.that(myList).isPartiallyOrdered(aComparator);
 
-### Maps
+#### Maps
 
 Presence of keys, keys for values, or values can be asserted
 
@@ -343,3 +346,6 @@ Naturally, also:
     ASSERT.that(map).isNotEmpty();
     ASSERT.that(map).hasSize(5); 
 
+## More Information
+
+For additional information read more in the list of [known types](known_types).
