@@ -5,12 +5,12 @@ url: /truth
 ---
 
 Truth is an [open source][github], [fluent] testing framework for Java that
-is designed to make your [test assertions](benefits.md#readable-assertions) and
-[failure messages](benefits.md#readable-messages) more readable. It natively
+is designed to make your [test assertions](benefits#readable-assertions) and
+[failure messages](benefits#readable-messages) more readable. It natively
 supports many JDK types (e.g., `Iterable`, `String`, `Map`) and [Guava]
 types (e.g., `Optional`, `Multimap`, `Multiset`, `Table`), and
-is also [extensible](extension.md) to new types (`YourCustomType`). See all of
-the known types [here](known_types.md).
+is also [extensible](extension) to new types (`YourCustomType`). See all of
+the known types [here](known_types).
 
 **Read about [the many benefits of Truth](benefits).**
 

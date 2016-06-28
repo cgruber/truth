@@ -107,7 +107,7 @@ you should stop and try to write the *inverse assertion*.
 
 ## How do I compare floating point numbers with Truth? {#floating-point}
 
-See the [floating point comparisons](comparison.md#floating-point). For example:
+See the [floating point comparisons](comparison#floating-point). For example:
 
 ```java
 assertThat(actualDouble).isWithin(tolerance).of(expectedDouble);
@@ -115,15 +115,15 @@ assertThat(actualDouble).isWithin(tolerance).of(expectedDouble);
 
 ## How is this different than JUnit, Hamcrest, Fest, AssertJ, etc.?
 
-See the [comparison](comparison.md) page.
+See the [comparison](comparison) page.
 
 ## How do I write my own Truth subject for my own type?
 
-See the [extension](extension.md) page.
+See the [extension](extension) page.
 
 ## Any other questions?
 
-Please [contact us](index.md#more-information) or [ask a question]
+Please [contact us](index#more-information) or [ask a question]
 
 
 <!-- References -->
