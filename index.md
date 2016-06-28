@@ -12,7 +12,7 @@ types (e.g., `Optional`, `Multimap`, `Multiset`, `Table`), and
 is also [extensible](extension.md) to new types (`YourCustomType`). See all of
 the known types [here](known_types.md).
 
-**Read about [the many benefits of Truth](benefits.md).**
+**Read about [the many benefits of Truth](benefits).**
 
 # Documentation
 
