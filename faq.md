@@ -1,7 +1,7 @@
 ---
 subtitle: Questions and Answers
 layout: default
-url: /faq/
+url: /faq
 ---
 
 1. auto-gen TOC:

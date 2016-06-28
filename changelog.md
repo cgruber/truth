@@ -1,7 +1,7 @@
 ---
 subtitle: Changelog
 layout: default
-url: /changelog/
+url: /changelog
 ---
 
 * auto-gen TOC:

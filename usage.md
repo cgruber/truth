@@ -1,7 +1,7 @@
 ---
 subtitle: Basic Usage
 layout: default
-url: /usage/
+url: /usage
 ---
 
 * auto-gen TOC:

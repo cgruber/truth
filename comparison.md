@@ -1,7 +1,7 @@
 ---
 subtitle: Comparison
 layout: default
-url: /comparison.html
+url: /comparison
 ---
 
 
