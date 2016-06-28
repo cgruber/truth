@@ -31,8 +31,8 @@ Truth has built in support for the following types:
 
     *   [`Object`]
     *   [`String`]
-    *   [`Comparable`]: this can be used for any Comparable type (Integers, Ranges, etc.)
-    *   [`Iterable`]: this can be used for any Iterable type (Lists, Sets, Collections, etc.)
+    *   [`Comparable`] - this can be used for any Comparable type (Integers, Ranges, etc.)
+    *   [`Iterable`] - this can be used for any Iterable type (Lists, Sets, Collections, etc.)
     *   [`Map`]
     *   [`Throwable`]
     *   [`Class`]
