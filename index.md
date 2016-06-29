@@ -22,9 +22,11 @@ externally on [github]. You can read its source directly or view its [API docs].
 # How to use Truth
 
 
-## 1. Add the appropriate dependency to your build file (pick one):
+## 1. Add the appropriate dependency to your build file:
 
 
+
+###Maven: 
 
 ```xml
 <dependency>
@@ -32,6 +34,17 @@ externally on [github]. You can read its source directly or view its [API docs].
   <artifactId>truth</artifactId>
   <version>0.28</version>
 </dependency>
+```
+
+Gradle:
+
+```groovy
+buildscript {
+  repositories.mavenLocal()
+}
+dependencies {
+  testCompile "com.google.truth:truth:0.28"
+}
 ```
 
 
@@ -78,5 +91,5 @@ can be found here:
 
 [Guava]: http://github.com/google/guava
 [API docs]: http://google.github.io/truth/api/latest/
-[`MapSubject`]: https://google.github.io/truth/api/latest/com/google/common/truth/MapSubject.html
+[`MapSubject`]: https://google.github.io/truth/api/latest/com/google/common/truth/MapSubject
 [Java Core Libraries Team]: https://www.reddit.com/r/java/comments/1y9e6t/ama_were_the_google_team_behind_guava_dagger/

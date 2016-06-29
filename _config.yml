@@ -11,12 +11,12 @@ description: "A proposition/assertion framework for testing in Java"
 # Navigation
 navigation:
 - text: Compare
-  url: /truth/comparison.html
+  url: /truth/comparison
 - text: Javadoc
   url: /truth/api/0.28/
 - text: FAQ
-  url: /truth/faq.html
+  url: /truth/faq
 - text: Benefit
-  url: /truth/benefits.html
+  url: /truth/benefits
 - text: Home
   url: /truth

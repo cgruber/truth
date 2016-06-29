@@ -13,7 +13,7 @@ from [Hamcrest], which uses [Polish prefix notation] to compose assertions.
 
 
 Some typical examples that can highlight the similarities and differences of the common assertions
-can be found below.  
+can be found below.
 
 ## Equality
 

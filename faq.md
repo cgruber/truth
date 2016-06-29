@@ -39,10 +39,10 @@ assert_().that(string).endsWith("gle");
 
 ## What's the difference between `containsAll` and `containsExactly` for iterables? {#exactly}
 
-`containsAll` means the iterable contains all of the expected elements.
+`containsAll` asserts that the iterable contains all of the expected elements.
 
-`containsExactly` means the iterable contains all of the expected elements __and
-nothing else__.
+`containsExactly` asserts that the iterable contains all of the expected
+elements __and nothing else__.
 
 For example:
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 subtitle: Benefits
-url: /benefits.html
+url: /benefits
 ---
 
 ## More readable test assertions {#readable-assertions}

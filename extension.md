@@ -14,6 +14,11 @@ including:
 
 *   [`Re2jSubjects`] for `com.google.re2j.Pattern`
 
+Other extensions that are not part of the Truth project itself include:
+
+*   [Compile-Testing] for testing annotation processors and compilation jobs
+
+
 
 
 ## Writing your own Truth extension
@@ -152,6 +157,7 @@ There are basically three parts to the example:
 
 [`@AutoValue`]:           http://github.com/google/auto/tree/master/value
 [`Re2jSubjects`]:         http://github.com/google/truth/blob/master/extensions/re2j/src/main/java/com/google/common/truth/extensions/re2j/Re2jSubjects.java
+[Compile Testing]:        http://github.com/google/compile-testing
 [employee example]:       http://github.com/google/truth/blob/master/core/src/test/java/com/google/common/truth/extension/
 [`Employee.java`]:        http://github.com/google/truth/blob/master/core/src/test/java/com/google/common/truth/extension/Employee.java
 [`EmployeeTest.java`]:    http://github.com/google/truth/blob/master/core/src/test/java/com/google/common/truth/extension/EmployeeTest.java

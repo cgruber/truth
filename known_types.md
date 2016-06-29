@@ -77,4 +77,3 @@ Truth has built in support for the following types:
 [`SetMultimap`]: http://google.github.io/truth/api/latest/com/google/common/truth/SetMultimapSubject
 [`Multiset`]: http://google.github.io/truth/api/latest/com/google/common/truth/MultisetSubject
 [`Table`]: http://google.github.io/truth/api/latest/com/google/common/truth/TableSubject
-
